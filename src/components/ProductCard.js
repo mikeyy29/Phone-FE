@@ -58,13 +58,13 @@ export const ProductCard = (props) => {
                 </Link>
             </div>
             <div className={` ${location.pathname == "/product" ? `gr-${grid}` : "col-3"}`}>
-                <Link className="product-card position-relative">
+                <Link to="product/:id" className="product-card position-relative">
                     <div className="product-image">
-                        <img src={watch} className="img-fluid" alt="product img" />
+                        <img src={watch2} className="img-fluid" alt="product img" />
                         <img src={watch} className="img-fluid" alt="product img" />
                         <div className="wishlist-icon position-absolute">
                             <button className='border-0 bg-transparent'>
-                                <img src="images/wish.svg" alt="wishlist" />
+                                <img src={wish} alt="wishlist" />
                             </button>
                         </div>
                     </div>
@@ -80,7 +80,7 @@ export const ProductCard = (props) => {
                             size={24}
                             activeColor="#ffd700"
                         />
-                        <p className={`description ${grid === 12 ? "d-block" : "d-none"}`} >
+                        <p className={`description ${grid === 12 ? "d-block" : "d-none"}`}    >
                             Apple Watch Series 8 Nhôm GPS 45mm Midnight VN/A là một chiếc đồng hồ thông minh cao cấp với thiết kế nhôm thanh lịch, màu midnight sang trọng. Sản phẩm sở hữu màn hình lớn, sắc nét, dễ nhìn dưới ánh sáng ngoài trời. Tích hợp GPS...
                         </p>
                         <p className="price">11.790.000đ</p>
