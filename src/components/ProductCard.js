@@ -15,7 +15,7 @@ export const ProductCard = (props) => {
     return (
         <>
             <div className={` ${location.pathname == "/product" ? `gr-${grid}` : "col-3"}`}>
-                <Link to="product/:id" className="product-card position-relative">
+                <Link to={`${location.pathname !== "/" ? "/product/:id" : location.pathname == "/product/:id" ? "/product/:id" : ":id"}`} className="product-card position-relative">
                     <div className="product-image">
                         <img src={watch2} className="img-fluid" alt="product img" />
                         <img src={watch} className="img-fluid" alt="product img" />
@@ -58,7 +58,7 @@ export const ProductCard = (props) => {
                 </Link>
             </div>
             <div className={` ${location.pathname == "/product" ? `gr-${grid}` : "col-3"}`}>
-                <Link to="product/:id" className="product-card position-relative">
+                <Link to={`${location.pathname !== "/" ? "/product/:id" : location.pathname == "/product/:id" ? "/product/:id" : ":id"}`} className="product-card position-relative">
                     <div className="product-image">
                         <img src={watch2} className="img-fluid" alt="product img" />
                         <img src={watch} className="img-fluid" alt="product img" />
